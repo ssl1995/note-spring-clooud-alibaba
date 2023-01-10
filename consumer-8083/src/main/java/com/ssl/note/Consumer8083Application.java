@@ -16,6 +16,9 @@ public class Consumer8083Application {
     }
 
 
+    /**
+     * 使用RestTemplate去远程调用
+     */
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate(){

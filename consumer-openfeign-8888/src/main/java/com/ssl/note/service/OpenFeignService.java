@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @description
  */
 @Service
-@FeignClient(value = "nacos-provider",url = "localhost:9001")
+@FeignClient(value = "nacos-provider")
 public interface OpenFeignService {
 
     @GetMapping("/hello")
