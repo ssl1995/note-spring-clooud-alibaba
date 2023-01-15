@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @description
  */
 @RestController
-@RefreshScope// 动态获取nacos config配置
+@RefreshScope // nocas配置中心，修改后自动刷新，无需重新启动项目
 public class ConfigController {
     /**
      * 读取Nacos配置中心的配置
