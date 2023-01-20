@@ -15,6 +15,14 @@ spring:
         port: 8719
       # 开启链路监控
       web-context-unify: false
+      datasource: # 配置Sentinel的持久化
+        nacos:
+          nacos:
+            serverAddr: localhost:8848
+            groupId: DEFAULT_GROUP
+            dataId: order-sentinel.json
+            ruleType: flow
+
 
 management:
   endpoint:
