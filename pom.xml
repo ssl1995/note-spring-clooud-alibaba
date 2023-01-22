@@ -10,6 +10,7 @@
         <module>config-3377</module>
         <module>consumer-openfeign-8888</module>
         <module>sentinel-8401</module>
+        <module>gateway-9999</module>
     </modules>
 
     <groupId>com.ssl.note</groupId>
@@ -32,11 +33,11 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring-boot.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--            <version>${spring-boot.version}</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

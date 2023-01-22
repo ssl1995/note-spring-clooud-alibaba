@@ -1,0 +1,39 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: cloud-gateway-service
+  cloud:
+    nacos:
+      discovery:
+        #        server-addr: http://101.201.154.144:8848
+        server-addr: localhost:8848
+    gateway:
+      #      globalcors: # 跨域问题
+      #        cors-configurations:
+      #          '[/**]':
+      #            allowedOrigins: "*"
+      #            allowedMethods: "*"
+      #            allowCredentials: true
+      #            allowedHeaders: "*"
+      discovery: # 网关可以被nacos发现
+        locator:
+          enabled: true
+      routes: # 路由
+        - id: nacos-provider
+          #          uri: http://localhost:9001
+          uri: lb://nacos-provider # 整合nacos进行负载均衡转发
+          order: 1
+          predicates: # 断言：命中一下路径就转发到uri的地址
+            - Path=/nacos-provider/**
+          filters: # 网关可以对请求cookie、请求头进行一层过滤
+            - StripPrefix=1 # 网关在进行路由转发之前，会去掉1层访问路径。
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: '*'
+
+
+
