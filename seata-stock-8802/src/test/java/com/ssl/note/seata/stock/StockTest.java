@@ -19,5 +19,11 @@ class StockTest {
         System.out.println(stock);
     }
 
+    @Test
+    void decrement() {
+        Integer id = 1;
+        stockService.decrement(id);
+    }
+
 
 }

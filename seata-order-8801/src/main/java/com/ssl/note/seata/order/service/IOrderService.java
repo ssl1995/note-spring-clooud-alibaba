@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2023-01-22
  */
 public interface IOrderService extends IService<Order> {
-
+    void createOrder(Integer productId);
 }

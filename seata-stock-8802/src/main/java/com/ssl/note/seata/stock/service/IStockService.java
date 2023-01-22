@@ -13,4 +13,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IStockService extends IService<Stock> {
 
+    void decrement(Integer id);
+
 }

@@ -26,7 +26,14 @@ public class OrderController {
     private IOrderService orderService;
 
     @GetMapping("/get/{id}")
-    public Order getById(Integer id) {
-        return orderService.getById(id);
+    public Order getById(Integer productId) {
+        return orderService.getById(productId);
     }
+
+    @GetMapping("/create/{id}")
+    public void createById(Integer productId) {
+        orderService.createOrder(productId);
+    }
+
+
 }

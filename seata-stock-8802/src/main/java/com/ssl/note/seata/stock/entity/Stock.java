@@ -3,10 +3,13 @@ package com.ssl.note.seata.stock.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 @TableName("stock")
+@Data
 public class Stock implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -16,26 +19,5 @@ public class Stock implements Serializable {
 
     private Integer count;
 
-    public Integer getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Integer productId) {
-        this.productId = productId;
-    }
-    public Integer getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) {
-        this.count = count;
-    }
-
-    @Override
-    public String toString() {
-        return "Stock{" +
-            "productId=" + productId +
-            ", count=" + count +
-        "}";
-    }
+    private BigDecimal money;
 }
