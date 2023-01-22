@@ -11,6 +11,8 @@
         <module>consumer-openfeign-8888</module>
         <module>sentinel-8401</module>
         <module>gateway-9999</module>
+        <module>seata-order-8801</module>
+        <module>seata-stock-8802</module>
     </modules>
 
     <groupId>com.ssl.note</groupId>
