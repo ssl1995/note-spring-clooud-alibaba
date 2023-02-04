@@ -13,8 +13,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://rm-2zep5730lmk5s5dy37o.mysql.rds.aliyuncs.com:3306/seata-demo?characterEncoding=UTF8&autoReconnect=true&serverTimezone=Asia/Shanghai&allowMultiQueries=true
-    username: root
-    password: Ssl@199502
+    username: ENC(krg5HObYwMgpMmi4DjfdHw==)
+    password: ENC(m8y8wG6u2NC7vGqLiqG89/tAVWZUZUd5)
 
 seata:
   tx-service-group: mygroup # 事务组名称，要和服务端对应
@@ -35,3 +35,10 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 mapper-locations: classpath:mapper/*.xml
+
+
+jasypt:
+  encryptor:
+    password: laosonga
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
